@@ -2,7 +2,6 @@ I'm Chukwuemeka Egbuchulam From Nigeria, a committed data scientist, who enjoys 
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Chukwuemeka)](https://github.com/Chukwuemeka/github-readme-stats)
 
-### Hi there 👋, my name is Chukwuemeka
 #### Data Scientist and Machine Learning Scientist
 ![Data Scientist and Machine Learning Scientist](https://media-exp1.licdn.com/dms/image/C5635AQGAqldDY1r7nA/profile-framedphoto-shrink_200_200/0/1614176951044?e=1617033600&v=beta&t=g07eRIYlVm0UIqxY4ic1_yE1jFWJWnS1KJ7jf5szWxI)
 
