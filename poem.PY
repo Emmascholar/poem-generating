@@ -89,3 +89,30 @@ mc = ModelCheckpoint('best_model.h5', monitor = "val_acc", mode = "max",save_bes
 model.fit(x, y, batch_size = 32, epochs = 120, callbacks = (early_stopping,mc))
 
 model.evaluate(x,y)
+## poetry generation
+
+poetry_length = 10
+
+def generate_poem(seed_text,n_lines):
+    for i in  range(n_lines):
+        text = []
+        for _ in range(poetry_length):
+            encode = token.texts_to_sequences([seed_text])
+            encode = pad_sequences(encode,maxlen = max_len, padding = 'pre')
+            y_pred = np.argmax(model.predict(encode),axis = 1)
+            
+            predicted_word = ""
+            for word,index in token.word_index.items():
+                if index == y_pred:
+                    predicted_word = word
+                    break
+            seed_text = seed_text + ' ' + predicted_word
+            text.append(predicted_word)
+        seed_text = text[-1]
+        text = " ".join(text)
+        print(text)
+
+
+
+seed_text = 'love'
+(generate_poem(seed_text,5))
