@@ -52,3 +52,40 @@ for i in encoder_txt:
     if len(i)>1:
         for d in range(2,len(i)):
             arr_of_stanza.append(i[:d])
+            
+## Padding
+
+max_len = 20
+seq =  pad_sequences(arr_of_stanza, maxlen = max_len, padding = 'pre')
+
+x = seq[:,:-1]
+y = seq[:,-1]
+
+print(x.shape,y.shape)
+
+## Convert (y) to one hot encoder
+
+y = np_utils.to_categorical(y, num_classes = vocab_size)
+
+## MODEL TRAINING
+
+seque_length = x.shape[1]
+
+model =  Sequential()
+
+model.add(Embedding(vocab_size, 50, input_length=seque_length))
+model.add(LSTM(100, return_sequences = True))
+model.add(LSTM(100))
+model.add(Dense(100, activation ='relu'))
+model.add(Dense(vocab_size, activation = 'softmax'))
+
+model.summary()
+
+model.compile(optimizer = 'adam', loss= "categorical_crossentropy", metrics = ['accuracy'])
+
+early_stopping = EarlyStopping(monitor = 'val_loss', patience =  2, restore_best_weights = True, verbose = 1)
+mc = ModelCheckpoint('best_model.h5', monitor = "val_acc", mode = "max",save_best_only = True, verbose = 1)
+
+model.fit(x, y, batch_size = 32, epochs = 120, callbacks = (early_stopping,mc))
+
+model.evaluate(x,y)
