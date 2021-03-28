@@ -1,7 +1,8 @@
 
 
-#### Data Scientist and Machine Learning Scientist
+
 ![Data Scientist and Machine Learning Scientist](https://media-exp1.licdn.com/dms/image/C5635AQGAqldDY1r7nA/profile-framedphoto-shrink_200_200/0/1614176951044?e=1617033600&v=beta&t=g07eRIYlVm0UIqxY4ic1_yE1jFWJWnS1KJ7jf5szWxI)
+#### Data Scientist and Machine Learning Scientist
 
 I'm critical in thinking when it comes to presenting ideas and pulling up solution to a particular problem.I enjoys building models and creating solution from data insight.
 
