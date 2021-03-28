@@ -7,11 +7,11 @@
 I'm critical in thinking when it comes to presenting ideas and pulling up solution to a particular problem.I enjoy building models and creating solution from data insight.
 
 Skills: 
--Machine learning,
--Exploratory Data Analysis, 
--Modeling, 
--Python, 
--NLP
+Machine learning,
+Exploratory Data Analysis, 
+Modeling, 
+Python, 
+NLP
 
 
 
