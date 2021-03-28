@@ -1,3 +1,3 @@
 # A Poem Generating MODEL
- In this respository, the model was built using a type of neural network known as LSTM.
+ In this respository, the model was built using LSTM neural network.
  There were no text prreprocessing done.
