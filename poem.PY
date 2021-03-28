@@ -16,7 +16,6 @@ from sklearn.model_selection import train_test_split
 from wordcloud import WordCloud as ws
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from keras.utils import np_utils
-from keras.optimizers import Adam 
 
 url = 'https://raw.githubusercontent.com/laxmimerit/poetry-data/master/adele.txt'
 
@@ -93,11 +92,11 @@ model.evaluate(x,y)
 
 poetry_length = 10
 
-def generate_poem(seed_text,n_lines):
+def generate_poem(word_text,n_lines):
     for i in  range(n_lines):
         text = []
         for _ in range(poetry_length):
-            encode = token.texts_to_sequences([seed_text])
+            encode = token.texts_to_sequences([word_text])
             encode = pad_sequences(encode,maxlen = max_len, padding = 'pre')
             y_pred = np.argmax(model.predict(encode),axis = 1)
             
