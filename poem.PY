@@ -105,13 +105,13 @@ def generate_poem(word_text,n_lines):
                 if index == y_pred:
                     predicted_word = word
                     break
-            seed_text = seed_text + ' ' + predicted_word
+            Word_text = word_text + ' ' + predicted_word
             text.append(predicted_word)
-        seed_text = text[-1]
+        Word_text = text[-1]
         text = " ".join(text)
         print(text)
 
 
 
-seed_text = 'love'
-(generate_poem(seed_text,5))
+Word_text = 'love'
+(generate_poem(word_text,5))
